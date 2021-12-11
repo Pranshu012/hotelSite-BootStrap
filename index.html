@@ -100,8 +100,7 @@
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
                     
-                        <a class="btn btn-warning btn-lg btn-block nav-link"  data-toggle="tooltip" data-html="true"  title="Or Call us at  <br><strong>+852 12345678</strong>"
-                            data-placement="bottom" role="button" href="#reservetable">Reserve Table</a> 
+                        <a class="btn btn-warning btn-lg btn-block nav-link"  data-toggle="modal"  data-target="#reservetable">Reserve Table</a> 
                     
                 </div>
             </div>
@@ -169,73 +168,18 @@
  
 
 
-
-        <!-- <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Our Lipsmacking Culinary Creations</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md"> 
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="img/uthappizza.png" alt="Uthappizza">
-                    <div class="media-body">
-                        <h2 class="mt-0">Uthappizza <span class="badge badge-danger">HOT</span><span class="badge badge-pill badge-secondary">$4.99</span></h2>
-                        <p class="d-none d-sm-block">A unique combination of Indian Uthappam (pancake) and
-                            Italian pizza, topped with Cerignola olives, ripe vine
-                            cherry tomatoes, Vidalia onion, Guntur chillies and
-                            Buffalo Paneer.</p>
+        <div id="reservetable" class="modal fade" role="dialog">
+            <div class="modal-dialog modal-lg" role="content">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="text-black">Reserve a Table</h1>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
                     </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row row-content align-items-center">
-            <div class="col-12 col-sm-4 col-md-3">
-                <h3>This Month's Promotions</h3>
-            </div>
-            <div class="col col-sm col-md"> 
-                <div class="media">
-                   
-                    <div class="media-body">
-                        <h2>Weekend Grand Buffet <span class="badge badge-danger">NEW</span></h2>
-                        <p class="d-none d-sm-block">Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person </p>
-                    </div>
-                    <img class="d-flex ml-3 img-thumbnail align-self-center"
-                    src="img/buffet.png" alt="buffet">
-                </div>
-            </div>
-        </div>
-
-        <div class="row row-content">
-            <div class="col-12 col-sm-4 order-sm-last col-md-3">
-                <h3>Meet our Culinary Specialists</h3>
-            </div>
-            <div class="col col-sm order-sm-first col-md">
-                <div class="media">
-                    <img class="d-flex mr-3 img-thumbnail align-self-center"
-                            src="img/alberto.png" alt="Alberto Somayya">
-                    <div class="media-body">
-                        <h2 class="mt-0">Alberto Somayya</h2>
-                        <h4>Executive Chef</h4>
-                        <p class="d-none d-sm-block">Award winning three-star Michelin chef with wide
-                            International experience having worked closely with
-                            whos-who in the culinary world, he specializes in
-                            creating mouthwatering Indo-Italian fusion experiences.
-                            </p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-
-        <div class="row row-content">
-            <div class="col-12 col-sm-8 offset-sm-2">
-                <div class="card" id="reservetable">
-                    <div class="card-header bg-warning"><h1 class="text-white">Reserve a Table</h1></div>
-                    <div class="card-body">
+                    
+                    <div class="modal-body">
                         <form>
                             <div class="form-group row">
-                                <label for="guestcount" class="col-md-2 col-form-label">Number of Guests</label>
+                                <label for="guestcount" class="col-md-2 col-form-label"><strong>Number of Guests</strong></label>
                                 <div class="col-md-10 ">
                                     <div class="form-check-inline">
                                         <input id="guestcount" name="guestcount" type="radio" class="form-check-input">1
@@ -265,7 +209,25 @@
                             </div>
 
                             <div class="form-group row">
-                                <label for="datetime" class="col-md-2 col-form-label">Date and Time</label>
+                                <label for="smoke" class="col-md-2 col-form-label"><strong>Section</strong></label>
+                                <div class="col-md-10 ">
+                                    <div class="form-check-inline">
+                                      <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                         <label class="btn btn-success active">
+                                            <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Non-smoking
+                                        </label>
+                                        <label class="btn btn-danger">
+                                            <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                        </label>
+
+                                      </div>
+                                     </div> 
+
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="datetime" class="col-md-2 col-form-label"><strong>Date and Time</strong></label>
                                 <div class="col-md-10 ">
                                     <div class="form-check-inline">
                                         <input id="datetime" name="datetime" type="text"  placeholder="Date" class="form-control">
@@ -280,6 +242,7 @@
 
                             <div class="form-group row">
                                 <div class="offset-md-2 col-md-10">
+                                    <button  data-dismiss="modal" class="btn btn-secondary">Cancel</button>
                                     <button type="submit" class="btn btn-primary">Reserve</button>
                                 </div>
                             </div>
