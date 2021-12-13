@@ -71,6 +71,30 @@ body{
     }
 }
 
+#loginModal{
+    .modal-header{
+        background-color: $background-dark;
+        .closeLogin{
+            color: $background-pale;
+        }
+    }
+    .modal-body{
+        background-color: $background-pale;
+    }
+}
+
+#reservetable{
+    .modal-header{
+        background-color: $background-dark;
+        .closeReserve{
+            color: $background-pale;
+        }
+    }
+    .modal-body{
+        background-color: $background-pale;
+    }
+}
+
 #carouselButton {
     right:0px;
     position: absolute;

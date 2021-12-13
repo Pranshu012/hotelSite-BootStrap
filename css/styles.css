@@ -47,6 +47,22 @@ body {
       left: 0;
       min-height: 300px; }
 
+#loginModal .modal-header {
+  background-color: #512DA8; }
+  #loginModal .modal-header .closeLogin {
+    color: #D1C4E9; }
+
+#loginModal .modal-body {
+  background-color: #D1C4E9; }
+
+#reservetable .modal-header {
+  background-color: #512DA8; }
+  #reservetable .modal-header .closeReserve {
+    color: #D1C4E9; }
+
+#reservetable .modal-body {
+  background-color: #D1C4E9; }
+
 #carouselButton {
   right: 0px;
   position: absolute;
